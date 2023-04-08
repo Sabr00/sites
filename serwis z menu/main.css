@@ -1,0 +1,297 @@
+/* kolory: 
+tło wszystkiego: #13678A
+tło tytułu: #2C3333
+tło menu poziomego: #0089A1
+tło menu poziomego (hover): #708186
+tło menu pionowego: #374955
+tło menu pionowego (hover): #677986
+tło treści: #1D4B63
+tło hoveru 'zadzwoń': #002B4A
+tło stopki: #0f5371
+
+
+font zawartości strony: #CBE4DE
+font menu poziomego hover: #5e645a
+font menu pionowego hover: #ffffff
+font stopki: #002B4A
+*/
+
+
+body {
+    background-image: url('serwis.jpg');
+}
+
+#container { /* wygląd kontenera, wyrównanie*/
+    height: 160vh;
+    width: 85vw;
+    background: #13678A;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    color: #CBE4DE;
+}
+
+#header { /* nagłówek */
+    height: 10vh;
+    background-color: #2C3333;
+    text-align: center;
+    font-size: 5vw;
+    line-height: 10vh;
+
+    color:#CBE4DE;
+}
+
+#menu_poziome { /* ustawienia diva na menu, sprawienie, żeby elementy dopasowały się do niego, marginesy */
+    height: 10vh;
+    width: 85vw;
+    padding: 0;
+    margin: 0;
+    background-color: #0089A1;
+}
+
+
+#menu_poziome ul {  /*brak punktorów, marginesy*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu_poziome > ul { /*równomierne ustawienie elementów*/
+    display: flex;
+    text-align: center;
+    line-height: 10vh;
+}
+
+#menu_poziome > ul > li { /* dopasowanie ramek do elementów (nie mam pojęcia jak to działa) */
+    flex: auto;
+}
+
+#menu_poziome  ul > li:hover { /*zmiana tła po najechaniu kursorem na elementy pierwszego rzędu */
+    background-color: #708186;
+}
+
+#menu_poziome  ul > li > ul > li:hover { /*zmiana tła po najechaniu kursorem na elementy drugiego rzędu */
+    background-color: #708186;
+}
+
+#menu_poziome a { /* wygląd linków */
+    text-decoration: none;
+    color: #CBE4DE;
+    font-size: 20px;
+}
+
+#menu_poziome a:hover { /* wygląd linków po najechaniu*/
+    color: #5a6461;
+}
+
+#menu_poziome > ul > li > ul { /* niewyświetlanie podlisty */
+    display: none;
+}
+
+#menu_poziome li:hover> ul {/* wyświetlanie podlisty, wygląd */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    background-color: #0089A1;
+
+}
+
+
+
+/* MENU PIONOWE START */
+
+#menu_pionowe {
+    height: 50vh;
+    width: 30vw;
+    margin-top: 10%;
+    background-color: #374955;
+    font-size:  1.2em;
+
+    max-width: 60%;
+    white-space: nowrap;
+    
+    /* w związku z zawartością */
+    float: left;
+}
+
+#menu_pionowe ul {  /*brak punktorów, marginesy*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu_pionowe > ul > li { /* równomierne rozmieszczenie */
+    height: 10vh;
+    line-height: 10vh;
+    position: relative;
+    padding: 0 15px;
+}
+
+#menu_pionowe a { /* wygląd linków */
+    text-decoration: none;
+    color: #CBE4DE;
+}
+
+
+#menu_pionowe a:hover { /* wygląd linków po najechaniu*/
+    color: #ffffff;
+}
+
+#menu_pionowe ul > li:hover { /*zmiana tła po najechaniu kursorem na elementy pierwszego rzędu */
+    background-color: #677986;
+}
+
+#menu_pionowe ul > li > ul > li:hover { /*zmiana tła po najechaniu kursorem na elementy drugiego rzędu */
+    background-color: #677986;
+}
+
+#menu_pionowe > ul > li > ul { /* niewyświetlanie podlisty */
+    display: none;
+}
+
+#menu_pionowe > ul > li:hover > ul { /*wyświetlanie podlisty po najechaniu */
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0%;
+    line-height: 5vh;
+}
+
+#menu_pionowe ul ul li { /* wygląd podlisty */
+    width: 20vw;
+    text-align: center;
+    background-color: #374955;
+}
+
+
+/* ZAWARTOŚĆ */
+
+#treść { /*cały kontener na zawartość; wygląd, ustawienie*/
+    width: 60vw;
+    max-width: 60%;
+    height: max-content;
+    padding-bottom: 10%;
+    padding: 1vh;
+    padding-bottom: 3%;
+    margin-top: 3%;
+    background-color: #1D4B63;
+    color: ;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#pierwszy { /* równomierne rozmieszczenie */
+    flex-grow: 1;
+    text-align: center;
+
+}
+#pierwszy h1 { /* rozmiar nagłówka */
+    font-size: 300%;
+}
+
+#pierwszy h3 { /* rozmiar nagłówka h3 */
+    font-size: 200%;
+}
+
+#pierwszy p { /* rozmiar paragrafów */
+    font-size: 150%;
+}
+
+
+#hover { /*podkreślenie pod 'zadzwoń', rozmiar czcionki*/
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px dotted rgb(0, 0, 0);
+    font-size: 250%;
+  }
+
+#hover span { /* ukrycie numeru telefonu, wygląd i pozycjonowanie */
+    visibility: hidden;
+    width: max-content;
+    background-color: #002B4A;
+    text-align: center;
+    padding: 0 5% 0 5%;
+    margin-left: 4%;
+    border-radius: 6px;
+    font-size: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  
+#hover:hover span { /* wyświetlanie numeru po najechaniu */
+    visibility: visible;
+  }
+
+#drugi { /* równomierne rozmieszczenie, wygląd czcionki */
+    flex-grow: 1;
+    padding-left: 4%;
+    color: #CBE4DE;
+}
+#drugi h {
+    margin-bottom: 0;
+}
+#drugi ul { /* wygląd punktorów, wyśrodkowanie */
+    margin-top: 1%;
+    list-style-image: url('icon.svg');
+    font-size: 130%;
+}
+
+#drugi ul lh { /*nagłówek listy */
+    font-size: 130%;
+    font-weight: 900;
+}
+
+#zdjecia { /* wyświetlanie zdjęć (równomierne rozmieszczenie) */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#zdjecia img { /* szerokość zdjęć */
+    width: 30%;
+}
+
+
+
+#footer { /* STOPKA */
+    background-color: #0f5371;
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #002B4A;
+}
+
+#footer #napisy {
+    display: flex;
+    align-items: inherit;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+#footer a { /* wygląd linków */
+    text-decoration: none;
+    color: #002B4A;
+}
+
+#footer a:hover { /* wygląd linków po najechaniu */
+    color: #000000;
+}
+
+#footer img {
+    width: 5%;
+    float: right;
+    padding-right: 10px;
+}
+#footer img:last-child {
+    padding-right: 20px;
+}
